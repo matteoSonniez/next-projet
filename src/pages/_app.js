@@ -1,12 +1,18 @@
-import '@/styles/globals.scss'
-import Header from '@/components/partials/Header';
+import '@/styles/globals.scss';
+import { useRouter } from "next/router";
+import MainLayout from '@/components/layouts/MainLayout';
 
 export default function App({ Component, pageProps }) {
  
+  const router = useRouter();
+
+  console.log(router)
+
   return (
     <>
-      <Header/>
-      <Component {...pageProps} />
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
     </>
   )
 }

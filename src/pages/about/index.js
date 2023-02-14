@@ -1,9 +1,9 @@
-import React from 'react';
+import Title from "@/components/UI/Title";
 
 const Index = () => {
   return (
     <div>
-      <p>Test</p>
+      <Title Level="h1" title="About"/>
     </div>
   );
 }

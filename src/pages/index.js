@@ -1,32 +1,9 @@
+import Title from "@/components/UI/Title";
+
 export default function Home() {
   return (
     <>
-      <div className="flex">
-        <div className="item"></div>
-        <div className="item xl"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item xl"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item xl"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item xl"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item xl"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item xl"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-      </div>
+      <Title Level="h1" title="Homepage" />
     </>
   )
 }

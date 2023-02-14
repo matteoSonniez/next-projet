@@ -25,8 +25,8 @@ const Index = () => {
       <nav className={styles.nav}>
         <ul className={styles.nav__list}>
           {
-            menu.map(item => (
-              <NavItem item={item} />
+            menu.map((item, index) => (
+              <NavItem key={index} item={item} />
             ))
           }
         </ul>
