@@ -1,6 +1,7 @@
 import '@/styles/globals.scss';
 import { useRouter } from "next/router";
 import MainLayout from '@/components/layouts/MainLayout';
+import RegisterLayout from '@/components/layouts/RegisterLayout';
 
 export default function App({ Component, pageProps }) {
  
@@ -10,9 +11,18 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      {
+        router.pathname.startsWith("/auth") ? (
+          <RegisterLayout>
+            <Component {...pageProps} />
+          </RegisterLayout>
+        )
+          : (
+            <MainLayout>
+              <Component {...pageProps} />
+            </MainLayout>
+          )
+      }
     </>
   )
 }
