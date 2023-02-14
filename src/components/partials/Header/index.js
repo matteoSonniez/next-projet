@@ -6,30 +6,31 @@ const Index = () => {
 
   const menu = [
     {
-      title: "about",
-      link: "./about"
-    },
-    {
       title: "Home",
       link: "./"
-    }
+    },
+    {
+      title: "About",
+      link: "./about"
+    },
   ]
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} flex`}>
       <div className={styles.logo}>
         <img src={Logo.src} alt="Qonto" />
       </div>
       <nav className={styles.nav}>
         <ul className={styles.nav__list}>
-          <li className={styles.nav__item}>
-            <Link href="/">
-              Home
-            </Link>
-            <Link href="/about">
-              About
-            </Link>
-          </li>
+          {
+            menu.map(item => (
+              <li className={styles.nav__item}>
+                <Link href={item.link}>
+                  {item.title}
+                </Link>
+              </li>
+            ))
+          }
         </ul>
       </nav>
     </div>
