@@ -1,17 +1,19 @@
-import Link from "next/link";
 import styles from "./index.module.scss";
 import Logo from "../../../../public/images/logo/logo.svg";
+import NavItem from "@/components/UI/NavItem";
 
 const Index = () => {
 
   const menu = [
     {
       title: "Home",
-      link: "./"
+      link: "./",
+      className:styles.nav__item
     },
     {
       title: "About",
-      link: "./about"
+      link: "./about",
+      className:styles.nav__item
     },
   ]
 
@@ -24,11 +26,7 @@ const Index = () => {
         <ul className={styles.nav__list}>
           {
             menu.map(item => (
-              <li className={styles.nav__item}>
-                <Link href={item.link}>
-                  {item.title}
-                </Link>
-              </li>
+              <NavItem item={item} />
             ))
           }
         </ul>
