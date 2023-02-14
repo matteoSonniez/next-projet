@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    .logo {
+        img {
+            width: 200px;
+        }
+    }
+    .nav {
+        padding: 10px;
+        &__list {
+            background: grey;
+        }
+        &__item {
+            margin: 0px 10px;
+            a {
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
