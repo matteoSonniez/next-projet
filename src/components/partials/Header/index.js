@@ -15,6 +15,16 @@ const Index = () => {
       link: "./about",
       className:styles.nav__item
     },
+    {
+      title: "Login",
+      link: "/auth/login",
+      className:styles.nav__item
+    },
+    {
+      title: "Sign in",
+      link: "/auth/register",
+      className:styles.nav__item
+    }
   ]
 
   return (

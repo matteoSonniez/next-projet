@@ -7,8 +7,6 @@ export default function App({ Component, pageProps }) {
  
   const router = useRouter();
 
-  console.log(router)
-
   return (
     <>
       {

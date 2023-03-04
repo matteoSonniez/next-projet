@@ -1,9 +1,25 @@
 .wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+    height: 100vh;
+    align-items: center;
     .left__part {
         width: 50%;
+        .form__wrapper {
+            width: 350px;
+            margin: 0 auto;
+        }
     }
-    .right_part {
+    .right__part {
         width: 50%;
+        background-color: #fdffd0;
+        .wrapper {
+            justify-content: center;
+        }
+        img {
+            width: 150px;
+            height: auto;
+        }
     }
 }
