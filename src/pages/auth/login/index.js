@@ -1,14 +1,20 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect,  } from 'react';
 import Title from '@/components/UI/Title';
+import { UserContext } from 'src/pages/_app';
 import Input from '@/components/UI/Input';
 import Notif from '@/components/UI/Notif';
 import Button from '@/components/UI/Button';
 import useFetch from '/src/hook/useFetch.js';
 import Cookies from 'js-cookie';
+import { useRouter } from 'next/router';
 import { HashLoader } from 'react-spinners'
 
 const Index = () => {
+
+  const router = useRouter();
+
+  const value = React.useContext(UserContext);
 
   const [userForm, setUserForm] = useState(
     {
@@ -50,6 +56,8 @@ const Index = () => {
       if (data.auth == true){
           Cookies.set('token_cookie', data.token);
           console.log("cookie", data);
+          router.push('/account');
+
       }
     }
   }, [data]);
@@ -60,6 +68,7 @@ const Index = () => {
   
   return (
     <div>
+      <p>{value}</p>
       <Title title="connexion" Level="h1"/>
       <form onSubmit={(e)=>submitRegister(e)}>
         {inputValue.map((input) => (
